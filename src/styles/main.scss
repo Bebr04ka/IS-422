@@ -1,0 +1,209 @@
+:root {
+  --color-primary: #006cbb;
+
+  --color-white: #fff;
+  --color-gray: #dfdfdf;
+  --color-black: #000;
+
+  --color-success: #01bd78;
+  --color-error: #d40019;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
+@font-face {
+  font-family: 'base';
+  font-weight: 400;
+  src: url('/fonts/400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'base';
+  font-weight: 700;
+  src: url('/fonts/700.woff2') format('woff2');
+  font-display: swap;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  width: fit-content;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin: 12px 0;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+
+//
+
+
+/* Начало - SubnetCalculator Styles */
+.subnet-calculator {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.subnet-calculator .calculator-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.subnet-calculator .calculator-title {
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.subnet-calculator .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.subnet-calculator .input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.subnet-calculator .input-field {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.subnet-calculator .input-field:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.subnet-calculator .input-error {
+  border-color: #ef4444;
+}
+
+.subnet-calculator .select-field {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.subnet-calculator .select-field:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.subnet-calculator .error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.subnet-calculator .calculate-button {
+  width: 100%;
+  padding: 1rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subnet-calculator .calculate-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.subnet-calculator .calculate-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.subnet-calculator .results-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #cbd5e1;
+}
+
+.subnet-calculator .results-title {
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.subnet-calculator .result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.subnet-calculator .result-item:last-child {
+  border-bottom: none;
+}
+
+.subnet-calculator .result-label {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.subnet-calculator .result-value {
+  color: #1e293b;
+  font-family: 'Courier New', monospace;
+}
+
+.subnet-calculator .highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+/* Конец - SubnetCalculator Styles */
