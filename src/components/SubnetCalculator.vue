@@ -73,8 +73,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-
-// Константы и функции прямо в компоненте
 const MASK_OPTIONS = [
   { value: '0.0.0.0', label: '0/0.0.0.0', cidr: 0 },
   { value: '128.0.0.0', label: '1/128.0.0.0', cidr: 1 },
